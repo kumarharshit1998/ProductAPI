@@ -61,7 +61,7 @@ namespace ProductApi.Controllers
              Product  product = _ProductList.Where(x => x.ProductId == id).FirstOrDefault();
             if (product == null)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "STudent Not found");
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Product Not found");
 
             }
             else
@@ -92,7 +92,7 @@ namespace ProductApi.Controllers
           Product product = _ProductList.Where(x => x.ProductId == id).FirstOrDefault();
             if (product == null)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "product Not found");
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Product Not found");
 
             }
             else
@@ -101,7 +101,7 @@ namespace ProductApi.Controllers
                 {
                    _ProductList.Remove(product);
                 }
-                return Request.CreateResponse(HttpStatusCode.OK, "Deleteed");
+                return Request.CreateResponse(HttpStatusCode.OK, "Deleted");
             }
 
         }
